@@ -163,7 +163,6 @@ def readContextFromFile(filepath):
 #     new_path_list = []
 #     for filename in file_path_list:
 
-
 #提取所有方法,存放在一个列表里
 #参数list: 已过滤的文件列表
 #return 列表:所有方法
@@ -182,7 +181,7 @@ def getAllmethod(file_path_list):
 
 #提取所有方法,存放在一个列表里
 #参数list: 已过滤的文件列表
-#return 列表:所有需要混淆的方法名和MD5对应的字典
+#return 字典:所有需要混淆的方法名和对应的MD5
 def getAllmethodName(method_list):
     #用于存放方法名
     method_name_list = []
@@ -258,6 +257,7 @@ if __name__ == '__main__':
     #step 5:混淆方法名
     isTrue = doReplaceKeys(need_encrypt_files_list,key_dic_m)
     print isTrue
+
     #step 5:混淆关键属性变量
 
 
